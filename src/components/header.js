@@ -12,9 +12,10 @@ const Header = () => (
           <span className="header__subTitles-jobTitle">UI/UX</span>
         </div>
       </li>
-      <li className="header__item"></li>
-      <li className="header__item"></li>
-      <li className="header__item"></li>
+      <li className="header__item">Home</li>
+      <li className="header__item">Blog</li>
+      <li className="header__item">Work</li>
+      <li className="header__item">Contact</li>
     </ul>
   </nav>
 )
