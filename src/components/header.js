@@ -26,7 +26,7 @@ const Header = () => {
         className="open-main-nav"
         onClick={() => setMobileNav(!mobileNavOpened)}
       >
-        <span class="burger"></span>
+        <span class={`burger ${mobileNavOpened ? "nav-mobile--is-open" : ""}`}></span>
         <span class="burger-text">Menu</span>
       </button>
       <nav
