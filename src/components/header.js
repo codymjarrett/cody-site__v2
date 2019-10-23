@@ -21,25 +21,43 @@ const Header = () => {
   // </nav>
 
   return (
-    <>
+    <div className="container">
       <button
-        className="open-main-nav"
+        className={`open-main-nav ${mobileNavOpened ? "nav-mobile--is-open" : ""}`}
         onClick={() => setMobileNav(!mobileNavOpened)}
       >
-        <span class={`burger ${mobileNavOpened ? "nav-mobile--is-open" : ""}`}></span>
+        <span
+          class="burger"
+        ></span>
         <span class="burger-text">Menu</span>
       </button>
       <nav
         className={`nav-mobile ${mobileNavOpened ? "nav-mobile--is-open" : ""}`}
       >
         <ul className="nav-mobile__group">
-          <li className="nav-mobile__item">Home</li>
-          <li className="nav-mobile__item">Blog</li>
-          <li className="nav-mobile__item">Work</li>
-          <li className="nav-mobile__item">Contact</li>
+          <li className="nav-mobile__item">
+            <Link to="/" className="link">
+              Home
+            </Link>
+          </li>
+          <li className="nav-mobile__item">
+            <Link to="/blog" className="link">
+              Blog
+            </Link>
+          </li>
+          <li className="nav-mobile__item">
+            <Link to="/work" className="link">
+              Work
+            </Link>
+          </li>
+          <li className="nav-mobile__item">
+            <Link to="/contact" className="link">
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
-    </>
+    </div>
   )
 }
 
