@@ -6,9 +6,15 @@ const Header = () => {
   const [mobileNavOpened, setMobileNav] = useState(false)
 
   return (
-    <header className="header header__container">
-      
-      <button
+   <header className="header">
+     <div className="header__logo">
+       <h2 className="header__title">Cody Jarrett</h2>
+       <div className="header__subtitles">
+         <span className="job-title">Front End Engineer</span>
+         <span className="job-title">UI/UX</span>
+       </div>
+     </div>
+     <button
         aria-label="open/close navigation"
         className={`open-main-nav ${
           mobileNavOpened ? "nav-mobile--is-open" : ""
@@ -18,38 +24,56 @@ const Header = () => {
         <span class="burger"></span>
         <span class="burger-text">Menu</span>
       </button>
-      <nav className={`header__nav ${mobileNavOpened ? "nav-mobile--is-open" : ""}`}>
-      <div className="header__title">
-        <h1 className="title">Cody Jarrett</h1>
-        <div className="header__subTitles">
-          <span className="subTitles-jobTitle">Front End Engineer</span>
-          <span className="subTitles-jobTitle">UI/UX</span>
-        </div>
-      </div>
+     <nav className="nav nav--main-nav">
         <ul className="nav__group">
-          <li className="nav__item">
-            <Link to="/" className="link">
-              Home
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to="/blog" className="link">
-              Blog
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to="/work" className="link">
-              Work
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to="/contact" className="link">
-              Contact
-            </Link>
-          </li>
+            <li className="nav__item">
+              <Link to="/" className="link">
+                Home
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/blog" className="link">
+                Blog
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/work" className="link">
+                Work
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/contact" className="link">
+                Contact
+              </Link>
+            </li>
         </ul>
-      </nav>
-    </header>
+     </nav>
+     <nav className={`nav nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}>
+        <ul className="nav__group">
+            <li className="nav__item">
+              <Link to="/" className="link">
+                Home
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/blog" className="link">
+                Blog
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/work" className="link">
+                Work
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/contact" className="link">
+                Contact
+              </Link>
+            </li>
+        </ul>
+     </nav>
+
+   </header>
   )
 }
 
