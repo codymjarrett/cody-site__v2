@@ -16,7 +16,7 @@ const Header = () => {
      </div>
      <button
         aria-label="open/close navigation"
-        className={`open-main-nav ${
+        className={`mobile-nav-btn ${
           mobileNavOpened ? "nav-mobile--is-open" : ""
         }`}
         onClick={() => setMobileNav(!mobileNavOpened)}
