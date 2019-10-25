@@ -24,7 +24,7 @@ const Header = () => {
         <span class="burger"></span>
         <span class="burger-text">Menu</span>
       </button>
-     <nav className="nav nav--main-nav">
+     <nav className="nav--main-nav">
         <ul className="nav__group">
             <li className="nav__item">
               <Link to="/" className="link">
@@ -48,7 +48,7 @@ const Header = () => {
             </li>
         </ul>
      </nav>
-     <nav className={`nav nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}>
+     <nav className={`nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}>
         <ul className="nav--mobile-nav__group nav__group">
             <li className="nav--mobile-nav__item nav__item">
               <Link to="/" className="link">
