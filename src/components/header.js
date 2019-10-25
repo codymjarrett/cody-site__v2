@@ -49,23 +49,23 @@ const Header = () => {
         </ul>
      </nav>
      <nav className={`nav nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}>
-        <ul className="nav__group">
-            <li className="nav__item">
+        <ul className="nav--mobile-nav__group nav__group">
+            <li className="nav--mobile-nav__item nav__item">
               <Link to="/" className="link">
                 Home
               </Link>
             </li>
-            <li className="nav__item">
+            <li className="nav--mobile-nav__item nav__item">
               <Link to="/blog" className="link">
                 Blog
               </Link>
             </li>
-            <li className="nav__item">
+            <li className="nav--mobile-nav__item nav__item">
               <Link to="/work" className="link">
                 Work
               </Link>
             </li>
-            <li className="nav__item">
+            <li className="nav--mobile-nav__item nav__item">
               <Link to="/contact" className="link">
                 Contact
               </Link>
