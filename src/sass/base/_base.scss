@@ -1,9 +1,18 @@
 body {
-    background-image: linear-gradient(30deg, #2b4a6a 50%, #2994b2 100%);
+    background-image: $site-primary-gradient;
     background-repeat: no-repeat;
+    font-family: 'Work Sans', sans-serif;
+
 }
 
-.body-container {
+// .body-container {
    
+
+// }
+
+main {
+    width: 90%;
+    max-width: 1060px;
+    margin: auto;
 
 }
