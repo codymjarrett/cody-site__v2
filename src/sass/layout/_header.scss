@@ -191,17 +191,27 @@
 
 .header {
     width: 90%;
-    margin: 2rem auto;
+    margin: 2rem auto 5rem;
 
     &__logo {
         display: block;
         text-decoration: none;
+
+        &:hover {
+
+            .header__title,
+            .header__subtitles {
+
+                color: $site-accent;
+
+            }
+        }
     }
 
 
     &__title {
         display: block;
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: $site-ternary;
         font-weight: 700;
         margin-bottom: .5rem;
@@ -211,7 +221,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: $site-ternary;
     }
 
@@ -225,7 +235,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: baseline;
-        margin-bottom: 5rem;
 
         &__logo {
             margin-right: auto;

@@ -1,0 +1,30 @@
+.contact {
+    background-color: $site-content-bg;
+    padding: 1rem;
+    border-radius: 5px;
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    &__input {
+        
+        .input-decorator {
+            width: 90%;
+            margin: auto;
+        }
+
+        input, textarea {
+            border: 2px solid black;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            padding: 1rem 0;
+            padding-left: 1rem;
+        }
+
+
+    }
+}
