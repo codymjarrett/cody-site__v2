@@ -9,22 +9,106 @@
         text-align: center;
     }
 
-    &__input {
-        
-        .input-decorator {
-            width: 90%;
-            margin: auto;
-        }
+    &__label {
+        display: block;
+        margin-bottom: 1rem;
+    }
 
-        input, textarea {
+    &__input {
+        .input-decorator {
+            padding: .5rem;
             border: 2px solid black;
             border-radius: 5px;
-            display: block;
-            width: 100%;
-            padding: 1rem 0;
-            padding-left: 1rem;
+            background: white;
+            margin-bottom: 1rem;
+
+            &:focus-within {
+                border: 5px solid $site-accent;
+            }
+
+        }
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+
+    }
+
+    input {
+        height: 2rem;
+    }
+
+    textarea {
+        height: 5rem;
+    }
+
+    &__btn {
+        background-color: $site-accent;
+        border: 2px solid black;
+        color: white;
+        padding: 1rem;
+
+        &:focus {
+            outline: solid $site-secondary;
+        }
+    }
+
+}
+
+@media(min-width: $screen-sm-min) {
+    .contact {
+        &__form {
+            display: grid;
+            column-gap: 3rem;
+            grid-template-areas:
+                "firstName phone"
+                "email email"
+                "message message"
+                ". button";
+
+
         }
 
+        &__input {
 
+            &:nth-child(1) {
+                grid-area: firstName;
+            }
+
+            &:nth-child(2) {
+                grid-area: phone;
+            }
+
+            &:nth-child(3) {
+                grid-area: email;
+            }
+
+            &:nth-child(4) {
+                grid-area: message;
+            }
+
+            &:nth-child(5) {
+                grid-area: button;
+                justify-self: stretch;
+
+                .contact__btn {
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+
+
+                    &:hover {
+                        background: $site-primary;
+                    }
+                }
+            }
+        }
     }
 }
