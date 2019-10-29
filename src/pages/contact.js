@@ -78,12 +78,10 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="contact__input">
-                <button class="contact__btn" type="submit">
+                <button class="btn btn--contact-btn" type="submit">
                   Send
                 </button>
               </div>
-              {status.status === "SUCCESS" ? <p>Thanks!</p> : ""}
-              {status.status === "ERROR" ? <p>Opps there was an error</p> : ""}
             </form>
           </div>
         )
@@ -91,14 +89,25 @@ const ContactPage = () => {
       case "SUCCESS":
         return (
           <div className="contact">
-            <p>Thanks for the message!</p>
+            <div className="contact-submission">
+              <span className="contact-submission__icon">👍</span>
+              <p className="contact-submission__message">Thanks for the message!</p>
+            </div>
           </div>
         )
         break
       case "ERROR":
         return (
           <div className="contact">
-            <p>There was an error, try again later. :( </p>
+            <div className="contact-submission">
+              <span className="contact-submission__icon">👎</span>
+              <p className="contact-submission__message">It looks like there was an error submitting, please try again.</p>
+              <div class="contact-submission__button">
+              <button className="btn btn--resubmit-btn" onClick={() => setStatus({ status: ""})}>
+                <Link to="/">Resubmit</Link>
+              </button>
+              </div>
+            </div>
           </div>
         )
     }

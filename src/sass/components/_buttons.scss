@@ -1,0 +1,31 @@
+.btn {
+    background-color: $site-accent;
+    border: 2px solid black;
+    color: white;
+    padding: 1rem;
+   
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: solid $site-secondary;
+    }
+
+    &:hover {
+        background: $site-primary;
+    }
+    
+
+    &--resubmit-btn {
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    // I WANT TO CHANGE THIS AT SOME POINT 
+    &--contact-btn {
+        width: 100%;
+    }
+}

@@ -47,17 +47,25 @@
         height: 5rem;
     }
 
-    &__btn {
-        background-color: $site-accent;
-        border: 2px solid black;
-        color: white;
-        padding: 1rem;
+}
 
-        &:focus {
-            outline: solid $site-secondary;
-        }
+.contact-submission {
+    &__icon {
+    display: block;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 2rem;
     }
 
+    &__message {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    }
+
+    &__button {
+        text-align: center;
+    }
 }
 
 @media(min-width: $screen-sm-min) {
@@ -96,18 +104,7 @@
                 grid-area: button;
                 justify-self: stretch;
 
-                .contact__btn {
-                    width: 100%;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    font-size: 1rem;
-                    text-transform: uppercase;
-
-
-                    &:hover {
-                        background: $site-primary;
-                    }
-                }
+                
             }
         }
     }
