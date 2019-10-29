@@ -1,11 +1,12 @@
+html, body, #___gatsby {
+    height: 100vh;
+}
+
 body {
     background-image: $site-primary-gradient;
     background-repeat: no-repeat;
     font-family: 'Work Sans', sans-serif;
-    // height: 100vh;
+    overflow-x: hidden;
 
 }
 
-main {
-    height: 100vh;
-}
