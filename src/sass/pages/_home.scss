@@ -12,17 +12,53 @@
     &__content {
         @include site-text-style;
     }
+    .floating-emoji {
+        display: none;
+    }
 }
 
 @media(min-width: $screen-sm-min) {
     .about-me {
+        position: relative;
 
         &__content{
             font-size: 2rem;
         }
+
+        .floating-emoji {
+            display: block;
+            position: absolute;
+            left: -20%;
+            top: 50%;
+            
+            .emoji {
+                font-size: 7rem;
+                position: absolute;
+            }
+            .emoji-hand {
+                font-size: 6rem;
+                left: -120px;
+                top: 45px;
+                animation: wavingEmojiHand 3s infinite ease;
+
+            }
+        }
+
+        
     }
 }
 
+@keyframes wavingEmojiHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 
 

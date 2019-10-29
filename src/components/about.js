@@ -21,6 +21,10 @@ const About = () => {
         incidunt eligendi provident consequatur in eaque ex facere hic neque,
         voluptatum ut! 
       </p>
+      <div className="floating-emoji">
+        <span className="emoji emoji-head">😃</span>
+        <span className="emoji emoji-hand">👋</span>
+      </div>
     </div>
   )
 }
