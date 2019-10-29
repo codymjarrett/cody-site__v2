@@ -28,8 +28,8 @@
         .floating-emoji {
             display: block;
             position: absolute;
-            left: -20%;
-            top: 50%;
+            left: -75px;
+            top: -65px;
             
             .emoji {
                 font-size: 7rem;
@@ -37,8 +37,8 @@
             }
             .emoji-hand {
                 font-size: 6rem;
-                left: -43px;
-                top: -66px;
+                left: -106px;
+                top: 53px;
                 animation: wavingEmojiHand 3s infinite ease;
 
             }
