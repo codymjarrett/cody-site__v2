@@ -1,17 +1,16 @@
 .about-me {
-    background-color: $site-content-bg;
-    padding: 1rem;
-    border-radius: 5px;
 
-    &__title {
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        text-align: center;
+
+    &__main {
+        background-color: $site-content-bg;
+        padding: 1rem;
+        border-radius: 5px;
     }
 
     &__content {
         @include site-text-style;
     }
+
     .floating-emoji {
         display: none;
     }
@@ -19,44 +18,48 @@
 
 @media(min-width: $screen-sm-min) {
     .about-me {
-        position: relative;
 
-        &__content{
-            font-size: 2rem;
+        &__content {
+            font-size: 1.3rem;
         }
-
-        .floating-emoji {
-            display: block;
-            position: absolute;
-            left: -75px;
-            top: -65px;
-            
-            .emoji {
-                font-size: 7rem;
-                position: absolute;
-            }
-            .emoji-hand {
-                font-size: 6rem;
-                left: -106px;
-                top: 53px;
-                animation: wavingEmojiHand 3s infinite ease;
-
-            }
+        &__main {
+            margin-top: 2rem;
         }
 
         
+
+        .floating-emoji {
+            display: block;
+            text-align: center;
+            
+            .emoji-hand {
+                font-size: 6rem;
+                animation: wavingEmojiHand 3s infinite ease;
+                display: block;
+
+            }
+        }
+
+
     }
 }
 
 @keyframes wavingEmojiHand {
     0% {
         transform: rotate(0deg);
+        transform-origin: bottom;
     }
+
     50% {
-        transform: rotate(15deg);
+        transform: rotate(33deg);
+        transform-origin: bottom;
+
     }
+
     100% {
         transform: rotate(0deg);
+        transform-origin: bottom;
+
     }
 }
 
