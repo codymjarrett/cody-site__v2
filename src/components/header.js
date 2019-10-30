@@ -27,22 +27,22 @@ const Header = () => {
       <nav className="nav--main-nav">
         <ul className="nav__group">
           <li className="nav__item">
-            <Link to="/" className="link home-link" id="homeLink">
+            <Link to="/" className="link home-link" id="homeLink" activeClassName="is-active">
               Home
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/blog" className="link blog-link">
+            <Link to="/blog" className="link blog-link" activeClassName="is-active">
               Blog
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/work" className="link work-link">
+            <Link to="/work" className="link work-link" activeClassName="is-active">
               Work
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/contact" className="link contact-link">
+            <Link to="/contact" className="link contact-link" activeClassName="is-active">
               Contact
             </Link>
           </li>
