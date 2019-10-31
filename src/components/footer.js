@@ -7,8 +7,12 @@ import React, { useState } from "react"
 const Footer = () => {
   return (
     <footer className="footer">
-        &copy; 2019 | Built using <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby.js</a> 
-        
+      <p class="footer__content">
+        &copy; 2019 | Built using{" "}
+        <a href="https://www.gatsbyjs.org/" target="_blank">
+          Gatsby.js
+        </a>
+      </p>
     </footer>
   )
 }

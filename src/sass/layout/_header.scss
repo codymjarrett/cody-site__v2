@@ -192,8 +192,9 @@
 
 .header {
     width: 90%;
+    margin: auto;
     margin-bottom: 2rem;
-    
+
 
     &__logo {
         display: block;
@@ -215,7 +216,7 @@
     &__title {
         display: block;
         font-size: 2rem;
-        color: $site-ternary;
+        color: $site-tertiary;
         font-weight: 700;
         margin-bottom: .5rem;
     }
@@ -225,7 +226,7 @@
         flex-direction: column;
         justify-content: center;
         font-size: 1rem;
-        color: $site-ternary;
+        color: $site-tertiary;
     }
 
 }
@@ -238,7 +239,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: baseline;
-        padding: 2rem 7rem;
+        // padding: 2rem 7rem;
 
         &__logo {
             margin-right: auto;
@@ -274,7 +275,7 @@
                 margin-left: 2rem;
 
                 .link {
-                    color: $site-ternary;
+                    color: $site-tertiary;
                     text-decoration: none;
                     font-size: 1.7rem;
                     position: relative;

@@ -27,9 +27,8 @@ const Layout = ({ children }) => {
   return (
     <div className="body-container">
       <Header siteTitle={data.site.siteMetadata.title} />
-
-        <main>{children}</main>
-        <Footer />
+      <main>{children}</main>
+      <Footer />
     </div>
   )
 }
