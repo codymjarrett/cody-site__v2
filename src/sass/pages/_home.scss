@@ -1,4 +1,4 @@
-.about-me {
+.home {
     margin: 0 auto;
     width: 90%;
     max-width: 960px;
@@ -32,7 +32,7 @@
 }
 
 @media(min-width: $screen-sm-min) {
-    .about-me {
+    .home {
 
         &__content {
             font-size: 1.3rem;

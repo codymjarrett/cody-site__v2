@@ -1,0 +1,25 @@
+.about {
+    width: 90%;
+    max-width: 60em;
+    margin: auto;
+    color: $site-primary-text;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__content {
+        @include site-text-style;
+
+        a {
+            color: $site-primary-text;
+
+            &:hover,
+            &:focus {
+                color: $site-accent;
+            }
+        }
+
+    }
+
+}
