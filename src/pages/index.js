@@ -6,13 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Home from "../components/home"
-import Tech from "../components/tech"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Home />
-    {/* <Tech /> */}
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

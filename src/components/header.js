@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { useState } from "react"
 
 const Header = () => {
@@ -17,8 +16,8 @@ const Header = () => {
         }`}
         onClick={() => setMobileNav(!mobileNavOpened)}
       >
-        <span class="burger"></span>
-        <span class="burger-text">Menu</span>
+        <span className="burger"></span>
+        <span className="burger-text">Menu</span>
       </button>
       <nav className="nav--main-nav">
         <ul className="nav__group">

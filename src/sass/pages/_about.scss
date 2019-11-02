@@ -5,11 +5,14 @@
     color: $site-primary-text;
 
     &__title {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
     &__content {
         @include site-text-style;
+        margin-bottom: 1rem;
 
         a {
             color: $site-primary-text;

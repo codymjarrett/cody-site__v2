@@ -1,6 +1,4 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -14,14 +12,14 @@ import {
 const Footer = () => {
   return (
     <footer className="footer">
-      <p class="footer__content">
+      <p className="footer__content">
         &copy; 2019 | Built using{" "}
-        <a href="https://www.gatsbyjs.org/" target="_blank">
+        <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
           Gatsby.js
         </a>
       </p>
       <div className="social">
-        <a href="https://www.github.com/codymjcodes" target="_blank">
+        <a href="https://www.github.com/codymjcodes" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
@@ -30,7 +28,7 @@ const Footer = () => {
             icon={faGithub}
           />
         </a>
-        <a href="https://www.linkedin.com/in/codymjarrett" target="_blank">
+        <a href="https://www.linkedin.com/in/codymjarrett" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
@@ -39,7 +37,7 @@ const Footer = () => {
             icon={faLinkedinIn}
           />
         </a>
-        <a href="https://twitter.com/codymjarrett" target="_blank">
+        <a href="https://twitter.com/codymjarrett" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
