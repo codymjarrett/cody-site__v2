@@ -1,10 +1,12 @@
 .contact {
-    background-color: $site-content-bg;
+    // background-color: $site-content-bg;
     padding: 1rem;
     border-radius: 5px;
     width: 90%;
-    max-width: 960px;
+    max-width: 60em;
     margin: auto;
+    margin-top: -3rem;
+    color: $site-primary-text;
 
     &__title {
         margin-bottom: 1rem;

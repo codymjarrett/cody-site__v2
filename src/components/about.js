@@ -7,16 +7,17 @@ import React, { useState } from "react"
 const About = () => {
   return (
     <div className="about-me">
-      <div className="floating-emoji">
-        <span className="emoji emoji-hand">👋</span>
+      <div className="about-me__heading">
+        <h1 className="title">
+          Cody Jarrett
+          <span className="job-title">Front End Engineer</span>
+          <span className="job-title">UI/UX</span>
+        </h1>
       </div>
       <div className="about-me__main">
         <p class="about-me__content">
-          Hello, I'm Cody! I'm a Chicago based Front End Engineer. Lorem, ipsum
-          dolor sit amet consectetur adipisicing elit. Ex blanditiis explicabo
-          harum assumenda asperiores quaerat nihil voluptatum laboriosam modi
-          iusto! taking care to deliver experiences that are usable, performant,
-          and accessible
+          I'm a Chicago based Front End Engineer. 
+          
         </p>
       </div>
     </div>

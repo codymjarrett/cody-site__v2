@@ -1,8 +1,28 @@
 .footer {
+    width: 90%;
+    margin: auto;
     text-align: center;
     padding: 1rem;
-    
+
     &__content {
         color: $site-tertiary;
+
+        a {
+            text-decoration: none;
+            color: $site-tertiary;
+
+            &:hover,
+            &:focus {
+                color: $site-accent;
+            }
+        }
+    }
+
+    .social {
+        margin-bottom: 1rem;
+
+        .social-icon {
+            padding: 1rem;
+        }
     }
 }

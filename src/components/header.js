@@ -8,11 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        <span className="header__title">Cody Jarrett</span>
-        <div className="header__subtitles">
-          <span className="job-title">Front End Engineer</span>
-          <span className="job-title">UI/UX</span>
-        </div>
+        <span className="header__title">CJ</span>
       </Link>
       <button
         aria-label="open/close navigation"

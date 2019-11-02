@@ -193,13 +193,14 @@
 .header {
     width: 90%;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
 
 
     &__logo {
         display: block;
         text-decoration: none;
         padding: 2rem;
+        font-family: 'Indie Flower', cursive;
 
         &:hover {
 
@@ -215,7 +216,7 @@
 
     &__title {
         display: block;
-        font-size: 2rem;
+        font-size: 4rem;
         color: $site-tertiary;
         font-weight: 700;
         margin-bottom: .5rem;
@@ -238,7 +239,7 @@
     .header {
         display: flex;
         justify-content: flex-end;
-        align-items: baseline;
+        align-items: center;
         // padding: 2rem 7rem;
 
         &__logo {
@@ -246,7 +247,7 @@
             flex: 1;
 
             .header__title {
-                font-size: 4rem;
+                font-size: 6rem;
             }
 
             .header__subtitles {

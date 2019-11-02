@@ -1,24 +1,34 @@
-.about-me{
-        margin: 0 auto;
-        width: 90%;
-        max-width: 960px;
-        padding: 0px 1.0875rem 1.45rem;
-        padding-top: 0;
- 
+.about-me {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 960px;
+    padding: 0px 1.0875rem 1.45rem;
+    padding-top: 0;
+    text-align: center;
 
-    &__main {
-        background-color: $site-content-bg;
-        padding: 1rem;
-        border-radius: 5px;
+    &__heading {
+
+        .title {
+            color: $site-primary-text;
+            font-size: 3rem;
+            line-height: 1.2;
+
+        }
+
+        .job-title {
+            display: block;
+            font-size: 1.3rem;
+
+        }
     }
+
+
+    
 
     &__content {
         @include site-text-style;
     }
 
-    .floating-emoji {
-        display: none;
-    }
 }
 
 @media(min-width: $screen-sm-min) {
@@ -27,46 +37,14 @@
         &__content {
             font-size: 1.3rem;
         }
+
         &__main {
             margin-top: 2rem;
         }
 
-        
-
-        .floating-emoji {
-            display: block;
-            text-align: center;
-            
-            .emoji-hand {
-                font-size: 6rem;
-                animation: wavingEmojiHand 3s infinite ease;
-                display: block;
-
-            }
-        }
-
-
     }
 }
 
-@keyframes wavingEmojiHand {
-    0% {
-        transform: rotate(0deg);
-        transform-origin: bottom;
-    }
-
-    50% {
-        transform: rotate(33deg);
-        transform-origin: bottom;
-
-    }
-
-    100% {
-        transform: rotate(0deg);
-        transform-origin: bottom;
-
-    }
-}
 
 
 
