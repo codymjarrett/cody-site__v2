@@ -4,7 +4,6 @@
     width: 90%;
     max-width: 60em;
     margin: auto;
-    margin-top: -5rem;
     color: $site-primary-text;
   
 
@@ -75,6 +74,8 @@
 
 @media(min-width: $screen-sm-min) {
     .contact {
+        margin-top: -5rem;
+
         &__form {
             display: grid;
             column-gap: 3rem;

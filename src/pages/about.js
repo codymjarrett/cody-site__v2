@@ -7,15 +7,18 @@ import SEO from "../components/seo"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 
-
 const options = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => (
       <p className="about__content">{children}</p>
     ),
-    [INLINES.HYPERLINK]: node =>  {
-      return <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{node.content[0].value}</a>
-    }
+    [INLINES.HYPERLINK]: node => {
+      return (
+        <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
+          {node.content[0].value}
+        </a>
+      )
+    },
   },
 }
 
@@ -24,12 +27,9 @@ const AboutPage = ({ data: { allContentfulAbout } }) => (
     <SEO title="About me" />
     <div className="about">
       <h1 className="about__title">About Me</h1>
-
-      {allContentfulAbout.edges[0].node.body.json.content.map(i =>
-        documentToReactComponents(i, options)
+      {allContentfulAbout.edges[0].node.body.json.content.map(stuff =>
+        documentToReactComponents(stuff, options)
       )}
-
-      
     </div>
   </Layout>
 )

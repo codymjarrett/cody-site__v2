@@ -1,5 +1,7 @@
 @import 'vendor/resets';
 @import 'vendor/normalize';
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 @import 'abstracts/variables';
 @import 'abstracts/functions';
@@ -18,5 +20,6 @@
 @import 'pages/home';
 @import 'pages/contact';
 @import 'pages/about';
+@import 'pages/work';
 
 

@@ -193,7 +193,7 @@
 .header {
     width: 90%;
     margin: auto;
-    margin-bottom: 6rem;
+    // margin-bottom: 2rem;
 
 
     &__logo {
@@ -240,7 +240,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        // padding: 2rem 7rem;
+        margin-bottom: 6rem;
 
         &__logo {
             margin-right: auto;

@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/about" className="link blog-link" activeClassName="is-active">
+            <Link to="/about" className="link about-link" activeClassName="is-active">
               About
             </Link>
           </li>
@@ -53,8 +53,8 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav--mobile-nav__item nav__item">
-            <Link to="/blog" className="link">
-              Blog
+            <Link to="/about" className="link">
+              About
             </Link>
           </li>
           <li className="nav--mobile-nav__item nav__item">
