@@ -13,6 +13,13 @@ import Header from "./header"
 import Footer from "./footer"
 import "../sass/main.scss"
 
+// this ensures that the icon CSS is loaded immediately before attempting to render icons
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from dynamically adding its css since we did it manually above
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

@@ -1,11 +1,17 @@
 import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { library } from "@fortawesome/fontawesome-svg-core"
 import {
   faGithub,
   faTwitter,
   faLinkedinIn,
+  fab,
 } from "@fortawesome/free-brands-svg-icons"
+
+library.add(fab)
+
+
 
 // import Image from "../components/image"
 
@@ -14,36 +20,52 @@ const Footer = () => {
     <footer className="footer">
       <p className="footer__content">
         &copy; 2019 | Built using{" "}
-        <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.gatsbyjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Gatsby.js
         </a>
       </p>
       <div className="social">
-        <a href="https://www.github.com/codymjcodes" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.github.com/codymjcodes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
             transform="shrink-4"
             color="#E9E9E9"
-            icon={faGithub}
+            icon={["fab", "github"]}
           />
         </a>
-        <a href="https://www.linkedin.com/in/codymjarrett" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/codymjarrett"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
             transform="shrink-4"
             color="#E9E9E9"
-            icon={faLinkedinIn}
+            icon={["fab", "linkedin"]}
           />
         </a>
-        <a href="https://twitter.com/codymjarrett" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://twitter.com/codymjarrett"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             className="social-icon"
             size="2x"
             transform="shrink-4"
             color="#E9E9E9"
-            icon={faTwitter}
+            icon={["fab", "twitter"]}
           />
         </a>
       </div>
