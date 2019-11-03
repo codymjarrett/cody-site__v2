@@ -6,8 +6,8 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Link to="/" className="header__logo">
-        <span className="header__title">CJ</span>
+      <Link to="/" className="header__logo header__title">
+        CJ
       </Link>
       <button
         aria-label="open/close navigation"
@@ -47,22 +47,22 @@ const Header = () => {
         className={`nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}
       >
         <ul className="nav--mobile-nav__group nav__group">
-          <li className="nav--mobile-nav__item nav__item">
+          <li className="nav--mobile-nav__item nav__item" onClick={() => setMobileNav(!mobileNavOpened)}>
             <Link to="/" className="link">
               Home
             </Link>
           </li>
-          <li className="nav--mobile-nav__item nav__item">
+          <li className="nav--mobile-nav__item nav__item" onClick={() => setMobileNav(!mobileNavOpened)}>
             <Link to="/about" className="link">
               About
             </Link>
           </li>
-          <li className="nav--mobile-nav__item nav__item">
+          <li className="nav--mobile-nav__item nav__item" onClick={() => setMobileNav(!mobileNavOpened)}>
             <Link to="/work" className="link">
               Work
             </Link>
           </li>
-          <li className="nav--mobile-nav__item nav__item">
+          <li className="nav--mobile-nav__item nav__item" onClick={() => setMobileNav(!mobileNavOpened)}>
             <Link to="/contact" className="link">
               Contact
             </Link>

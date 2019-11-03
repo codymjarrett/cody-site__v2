@@ -191,31 +191,22 @@
 
 
 .header {
-    width: 90%;
-    margin: auto;
-    // margin-bottom: 2rem;
-
-
+    padding: 1rem;
+   
     &__logo {
-        display: block;
+        display: inline;
         text-decoration: none;
         padding: 2rem;
         font-family: 'Indie Flower', cursive;
 
         &:hover {
-
-            .header__title,
-            .header__subtitles {
-
-                color: $site-accent;
-
-            }
+            color: $site-accent;
         }
     }
 
 
     &__title {
-        display: block;
+        display: inline;
         font-size: 4rem;
         color: $site-tertiary;
         font-weight: 700;
@@ -237,6 +228,8 @@
 @media(min-width: $screen-sm-min) {
 
     .header {
+        width: 90%;
+        margin: auto;
         display: flex;
         justify-content: flex-end;
         align-items: center;
