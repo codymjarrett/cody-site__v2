@@ -21,27 +21,36 @@ const WorkSlider = ({ response }) => {
   }
   return (
     <div className="work-mobile-slider">
-      <Slider {...settings}>
+      <Slider {...settings} className="work-mobile-slider__slick">
         {response.map(node => (
-          <div>
+          <div className="work-mobile-slider__container">
             <span className="title">{node.node.title}</span>
-            <p className="desc">
-              {node.node.description.content[0].content[0].value}
-            </p>
-            <ul className="group">
-              {node.node.tech.map(t => (
-                <li className="item">{t}</li>
-              ))}
-            </ul>
-            <div className="image">
+            <div className="media">
               <img
                 style={{ maxWidth: "100%", width: "24rem" }}
                 src={node.node.image.file.url}
                 alt=""
               />
             </div>
+            <div className="description">
+            <span className="description__heading">What is this?</span>
+            <p className="description__content">
+              {node.node.description.content[0].content[0].value}
+            </p>
+
+            </div>
+            <div className="tech-stack">
+            <span className="tech-stack__heading">Tech Stack:</span>
+            <ul className="tech-stack__group">
+              {node.node.tech.map(t => (
+                <li className="tech-stack__item">{t}</li>
+              ))}
+            </ul>
+
+            </div>
+            
             <div className="buttons">
-              <button>
+              <button className="btn">
                 <a
                   href={node.node.github}
                   target="_blank"
@@ -50,7 +59,7 @@ const WorkSlider = ({ response }) => {
                   Github
                 </a>
               </button>
-              <button>
+              <button className="btn">
                 <a
                   href={node.node.demo}
                   target="_blank"

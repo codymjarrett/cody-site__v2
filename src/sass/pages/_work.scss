@@ -10,7 +10,70 @@
         text-align: center;
     }
 
+    .work-mobile-slider {
+        @include site-text-style;
 
+        &__slick {
+
+            .work-mobile-slider__container {
+                .title {
+                    text-align: center;
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+
+                .media {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }
+
+                .description {
+                    margin-bottom: 1rem;
+
+                    &__heading {
+                        text-align: center;
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+
+                .tech-stack {
+                    margin-bottom: 1rem;
+
+                    &__heading {
+                        text-align: center;
+                        display: block;
+                        font-weight: 600;
+                    }
+
+                    &__group {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    &__item {
+                        padding-right: 1rem;
+                    }
+                }
+
+                .title {
+                    font-weight: 600;
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: space-around;
+
+                    a {
+                        text-decoration: none;
+                        color: $site-primary-text;
+                    }
+                }
+            }
+        }
+    }
 
 
     &__container {
