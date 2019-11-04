@@ -1,15 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 import Slider from "react-slick"
 
-const WorkSlider = ({ response }) => {
-  useEffect(() => {
-    console.log(response.map(i => console.log(i)))
-  }, [response])
+const WorkMobile = ({ response }) => {
+  
 
   const settings = {
     dots: true,
@@ -76,4 +72,4 @@ const WorkSlider = ({ response }) => {
   )
 }
 
-export default WorkSlider
+export default WorkMobile

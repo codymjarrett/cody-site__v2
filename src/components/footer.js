@@ -27,6 +27,16 @@ const Footer = () => {
         >
           Gatsby.js
         </a>
+        {" "}
+        &
+        {" "}
+        <a
+          href="https://www.contentful.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contentful CMS
+        </a>
       </p>
       <div className="social">
         <a

@@ -1,5 +1,5 @@
 .work {
-    width: 90%;
+    width: 80%;
     max-width: 60em;
     margin: auto;
     color: $site-primary-text;
@@ -75,55 +75,6 @@
         }
     }
 
-
-    &__container {
-        display: none;
-
-        .projects {
-            margin-bottom: 3rem;
-
-            .work__names {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
-
-        }
-
-
-        .work__view {
-
-            .work__title {
-                display: block;
-
-            }
-
-            .work__content {
-
-                .work__tech {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-evenly;
-
-                }
-
-                .work__details {
-
-                    img {
-                        max-width: 100%;
-                        width: 24rem;
-                    }
-                }
-            }
-
-        }
-
-
-    }
-
-
-
-    &__view {}
 }
 
 
@@ -136,7 +87,30 @@
         }
 
         &__container {
-            display: block;
+            display: flex;
+
+            .projects {
+                flex: 1;
+            }
+
+            .work__view {
+                flex: 3;
+
+                .work__content {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .work__details {
+                        .buttons {
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                        button {
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
     }
 }
