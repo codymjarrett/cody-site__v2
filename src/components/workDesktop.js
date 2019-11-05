@@ -6,40 +6,38 @@ const WorkDesktop = ({ response }) => {
     "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
   )
 
-  useEffect(() => {
-  }, [response])
+  useEffect(() => {}, [response])
 
- 
   const getNewProject = id => {
     setInitialProject(id)
   }
 
-   const title = () => {
+  const title = () => {
     return response
-    .filter(p => p.node.id === initialProject)
-    .map(i => <span className="work__title">{i.node.title}</span>)
-   }
+      .filter(p => p.node.id === initialProject)
+      .map(i => <span className="work__title">{i.node.title}</span>)
+  }
 
-   const tech = () => {
-return response
-.filter(p => p.node.id === initialProject)
-.map(i => <li className="work__item">{i.node.tech}</li>)
-   }
+  const tech = () => {
+    return response
+      .filter(p => p.node.id === initialProject)
+      .map(i => <li className="work__item">{i.node.tech}</li>)
+  }
 
-   const image = () => {
-     return response
-     .filter(p => p.node.id === initialProject)
-     .map(i => (
-       <img
-         style={{ maxWidth: "100%", width: "30rem" }}
-         src={i.node.image.file.url}
-         alt="screen shot of project"
-       />
-     ))
-   }
+  const image = () => {
+    return response
+      .filter(p => p.node.id === initialProject)
+      .map(i => (
+        <img
+          style={{ maxWidth: "100%", width: "30rem" }}
+          src={i.node.image.file.url}
+          alt="screen shot of project"
+        />
+      ))
+  }
 
-   const listOfTech = () => {
-     return response.map((i, idx) => {
+  const listOfTech = () => {
+    return response.map((i, idx) => {
       return (
         <li
           className="work-item"
@@ -51,28 +49,22 @@ return response
         </li>
       )
     })
-   }
+  }
 
   return (
     <div className="work__container">
       <div className="projects">
         <p className="projects__heading">Projects</p>
-        <ul className="group work__names">
-          {response && listOfTech() }
-        </ul>
+        <ul className="group work__names">{response && listOfTech()}</ul>
       </div>
 
       <div className="work__view">
-        
-          {response && title()}
-       
+        {response && title()}
+
         <div className="work__content">
           <div className="technology">
             <p className="technology__heading">Technologies</p>
-            <ul className="group work__tech">
-              {response && tech()
-                }
-            </ul>
+            <ul className="group work__tech">{response && tech()}</ul>
           </div>
           <div className="work__details">
             {response && image()}
