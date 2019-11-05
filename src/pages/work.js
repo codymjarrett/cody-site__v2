@@ -9,23 +9,14 @@ import WorkDesktop from "../components/workDesktop"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const WorkPage = ({ data: { allContentfulProject } }) => {
-  const [state, setState] = useState()
-  const [currentProject, setCurrentProject] = useState()
-
-  useEffect(() => {
-    if (allContentfulProject) {
-      setState(allContentfulProject.edges)
-    }
-  }, [allContentfulProject])
-
   
   return (
     <Layout>
       <SEO title="Work" />
       <div className="work">
         <h1 className="work__title">Work</h1>
-        <WorkMobile response={state} />
-        <WorkDesktop response={state} />
+        <WorkMobile response={allContentfulProject.edges} />
+        <WorkDesktop response={allContentfulProject.edges} />
       </div>
     </Layout>
   )

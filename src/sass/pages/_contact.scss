@@ -5,6 +5,7 @@
     max-width: 60em;
     margin: auto;
     color: $site-primary-text;
+    
   
 
     &__title {
@@ -74,7 +75,7 @@
 
 @media(min-width: $screen-sm-min) {
     .contact {
-        margin-top: -5rem;
+        
 
         &__form {
             display: grid;

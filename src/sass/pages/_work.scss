@@ -5,7 +5,7 @@
     color: $site-primary-text;
 
     &__title {
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         font-size: 1.2rem;
         text-align: center;
     }
@@ -16,6 +16,7 @@
         &__slick {
 
             .work-mobile-slider__container {
+               
                 .title {
                     text-align: center;
                     display: block;
@@ -75,12 +76,22 @@
         }
     }
 
+    &__container {
+        display: none;
+    }
+
 }
 
 
 @media(min-width: $screen-sm-min) {
 
     .work {
+        width: 90%;
+    max-width: 76em;
+
+    .work__title {
+        margin-bottom: 5rem;
+    }
 
         .work-mobile-slider {
             display: none;
@@ -91,22 +102,91 @@
 
             .projects {
                 flex: 1;
+
+                &__heading {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+                .work__names {
+                    .work-item {
+                        padding: .5rem;
+                        &:hover {
+                            transform: scale(1.1)
+                        }
+
+                        &.active {
+                            button {
+                                color: $site-accent;
+                            }
+                        }
+
+                    
+                        button {
+                            background: none;
+                            border: none;
+                            color: white;
+                            cursor: pointer;
+    
+                        }
+                    }
+                }
+               
             }
 
             .work__view {
                 flex: 3;
+                text-align: center;
+
+                
 
                 .work__content {
                     display: flex;
-                    justify-content: space-between;
+                  
+
+                    .technology {
+                        flex: 1;
+
+                        &__heading {
+                            font-size: 1.3rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                        }
+
+                        .work__tech {
+
+                            .work__item {
+                                margin: .5rem 0;
+                            }
+                        }
+                    }
 
                     .work__details {
+                        flex: 1;
+                        .current-work__title {
+                            font-size: 1.3rem;
+                             font-weight: 600;
+                             display: block;
+                             margin-bottom: 1rem;
+                        }
+                        .media {
+                            margin-bottom: 1rem;
+                            
+                            &__image {
+                                border: 2px solid white;
+                                border-radius: 5px;
+                            }
+                        }
                         .buttons {
                             display: flex;
                             justify-content: space-around;
                         }
                         button {
                             display: block;
+                            a {
+                                text-decoration: none;
+                                color: white;
+                            }
                         }
                     }
                 }
