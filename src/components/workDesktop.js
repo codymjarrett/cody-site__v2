@@ -2,27 +2,17 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 
 const WorkDesktop = ({ response }) => {
-  const [currentProjectId, setCurrentProjectId] = useState(
-    "1cbb9ca2-c63f-5755-a967-937a1dc9d144"
+  const [initialProject, setInitialProject] = useState(
+    "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
   )
 
-  const [currentProjectTech, setCurrentProjectTech] = useState()
-  const [currentProjectData, setCurrentProjectData] = useState()
-
   useEffect(() => {
-    const r = response.filter(i => i.node.id == currentProjectId)
-    setCurrentProjectData(r)
-    console.log("data", currentProjectData)
-    setCurrentProjectTech(r[0].node.tech)
-  }, [])
-  {
-    console.log(currentProjectTech)
-    console.log("response", response)
-  }
+  }, [response])
 
-  const changeProject = (id) => {
-    setCurrentProjectId(id)
-    
+ 
+
+  const getNewProject = id => {
+    setInitialProject(id)
   }
 
   return (
@@ -30,36 +20,47 @@ const WorkDesktop = ({ response }) => {
       <div className="projects">
         <p className="projects__heading">Projects</p>
         <ul className="group work__names">
-          {response.map(i => (
-            <li className="work-item" key={i.node.id} data-id={i.node.id} onClick={() => changeProject(i.node.id)}>
-              {i.node.title}
-            </li>
-          ))}
+          {response
+            ? response.map((i, idx) => {
+                return (
+                  <li
+                    className="work-item"
+                    key={idx}
+                    data-id={i.node.id}
+                    onClick={id => getNewProject(i.node.id)}
+                  >
+                    <button>{i.node.title}</button>
+                  </li>
+                )
+              })
+            : ""}
         </ul>
       </div>
 
       <div className="work__view">
-        <span className="work__title">Dad Over-flow</span>
+        <span className="work__title">Dad Over-jhflow</span>
         <div className="work__content">
           <div className="technology">
             <p className="technology__heading">Technologies</p>
             <ul className="group work__tech">
-              {currentProjectTech
-                ? currentProjectTech.map(t => (
-                    <li className="work-item">{t}</li>
-                  ))
+              {response
+                ? response
+                    .filter(p => p.node.id === initialProject)
+                    .map(i => <li className="work__item">{i.node.tech}</li>)
                 : ""}
             </ul>
           </div>
           <div className="work__details">
-            {currentProjectData
-              ? currentProjectData.map(i => (
-                  <img
-                    style={{ maxWidth: "100%", width: "30rem" }}
-                    src={i.node.image.file.url}
-                    alt="screen shot of project"
-                  />
-                ))
+            {response
+              ? response
+                  .filter(p => p.node.id === initialProject)
+                  .map(i => (
+                    <img
+                      style={{ maxWidth: "100%", width: "30rem" }}
+                      src={i.node.image.file.url}
+                      alt="screen shot of project"
+                    />
+                  ))
               : ""}
 
             <div className="buttons">

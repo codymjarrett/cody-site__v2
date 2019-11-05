@@ -18,7 +18,7 @@ const WorkMobile = ({ response }) => {
   return (
     <div className="work-mobile-slider">
       <Slider {...settings} className="work-mobile-slider__slick">
-        {response.map(node => (
+        {response ? response.map(node => (
           <div className="work-mobile-slider__container">
             <span className="title">{node.node.title}</span>
             <div className="media">
@@ -66,7 +66,7 @@ const WorkMobile = ({ response }) => {
               </button>
             </div>
           </div>
-        ))}
+        )) : ""}
       </Slider>
     </div>
   )
