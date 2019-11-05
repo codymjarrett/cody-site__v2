@@ -31,7 +31,7 @@ const WorkDesktop = ({ response }) => {
         <img
           style={{ maxWidth: "100%", width: "30rem" }}
           src={i.node.image.file.url}
-          alt="screen shot of project"
+          alt={`screenshot of ${i.node.title}`}
         />
       ))
   }
