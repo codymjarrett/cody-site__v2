@@ -11,8 +11,8 @@ const WorkDesktop = ({ response }) => {
 
   useEffect(() => {}, [response])
 
-  useEffect(()=> {
-    if(response) {
+  useEffect(() => {
+    if (response) {
       setActiveElement(response[0].node.id)
       // setInitialProject(response[0].node.id)
     }
@@ -23,26 +23,32 @@ const WorkDesktop = ({ response }) => {
   }
 
   const addCurrentStyle = event => {
-    const elemId = event.currentTarget.dataset.id;
+    const elemId = event.currentTarget.dataset.id
     setActiveElement(elemId)
   }
 
-  const getNewProjectAndAddStyle = (event, id) =>{
+  const getNewProjectAndAddStyle = (event, id) => {
     getNewProject(id)
     addCurrentStyle(event)
-
   }
-
 
   const title = () => {
     return response
       .filter(p => p.node.id === initialProject)
-      .map(i => <span className="current-work__title" key={i.node.id}>{i.node.title}</span>)
+      .map(i => (
+        <span className="current-work__title" key={i.node.id}>
+          {i.node.title}
+        </span>
+      ))
   }
 
   const tech = () => {
     let n = response.filter(p => p.node.id === initialProject)
-    n = n[0].node.tech.map(i => <li className="work__item" key={i.id}>{i}</li>)
+    n = n[0].node.tech.map(i => (
+      <li className="work__item" key={i.id}>
+        {i} 
+      </li>
+    ))
     return n
   }
 
@@ -51,7 +57,7 @@ const WorkDesktop = ({ response }) => {
       .filter(p => p.node.id === initialProject)
       .map(i => (
         <img
-          style={{ width: "33rem" }}
+          style={{ width: "27rem", "max-height": "233.812px" }}
           src={i.node.image.file.url}
           alt={`screenshot of ${i.node.title}`}
           className="media__image"
@@ -63,7 +69,7 @@ const WorkDesktop = ({ response }) => {
     return response.map((i, idx) => {
       return (
         <li
-          className={`work-item ${activeElement === i.node.id ? 'active' : ""}`}
+          className={`work-item ${activeElement === i.node.id ? "active" : ""}`}
           key={idx}
           data-id={i.node.id}
           onClick={(event, id) => getNewProjectAndAddStyle(event, i.node.id)}
@@ -75,19 +81,13 @@ const WorkDesktop = ({ response }) => {
   }
 
   const github = () => {
-   
-      let n = response.filter(p => p.node.id === initialProject)
-      return n[0].node.github
-
-  
+    let n = response.filter(p => p.node.id === initialProject)
+    return n[0].node.github
   }
 
-
   const demo = () => {
-   
     let n = response.filter(p => p.node.id === initialProject)
     return n[0].node.demo
-    
   }
 
   return (
@@ -98,27 +98,32 @@ const WorkDesktop = ({ response }) => {
       </div>
 
       <div className="work__view">
-    
-
         <div className="work__content">
-          <div className="technology">
-            <p className="technology__heading">Technologies</p>
-            <ul className="group work__tech">{response && tech()}</ul>
-          </div>
           <div className="work__details">
-          {response && title()}
-          <div class="media">
-
+            {response && title()}
+            <div class="media">
+            <div class="media__wrapper">
             {response && image()}
-          </div>
-
             <div className="buttons">
               <button type="button" className="btn">
-                <a href={response && github()} target="_blank">Github</a>
-              
-                </button>
-              <button type="button" className="btn"><a href={response && demo()} target="_blank">Demo</a></button>
+                <a href={response && github()} target="_blank">
+                  Github
+                </a>
+              </button>
+              <button type="button" className="btn">
+                <a href={response && demo()} target="_blank">
+                  Demo
+                </a>
+              </button>
             </div>
+
+            </div>
+            </div>
+            <div className="technology">
+              <p className="technology__heading">Technologies</p>
+              <ul className="group work__tech">{response && tech()}</ul>
+            </div>
+            
           </div>
         </div>
       </div>

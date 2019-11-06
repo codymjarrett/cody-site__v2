@@ -16,7 +16,7 @@
         &__slick {
 
             .work-mobile-slider__container {
-               
+
                 .title {
                     text-align: center;
                     display: block;
@@ -87,11 +87,12 @@
 
     .work {
         width: 90%;
-    max-width: 76em;
+        max-width: 76em;
 
-    .work__title {
-        margin-bottom: 5rem;
-    }
+        &__title {
+            margin-bottom: 1rem;
+        }
+
 
         .work-mobile-slider {
             display: none;
@@ -99,6 +100,7 @@
 
         &__container {
             display: flex;
+            justify-content: space-around;
 
             .projects {
                 flex: 1;
@@ -108,9 +110,11 @@
                     font-weight: 600;
                     margin-bottom: 1rem;
                 }
+
                 .work__names {
                     .work-item {
                         padding: .5rem;
+
                         &:hover {
                             transform: scale(1.1)
                         }
@@ -121,68 +125,107 @@
                             }
                         }
 
-                    
+
                         button {
                             background: none;
                             border: none;
                             color: white;
                             cursor: pointer;
-    
+
                         }
                     }
                 }
-               
+
             }
 
             .work__view {
-                flex: 3;
+                flex: 2;
                 text-align: center;
 
-                
+
 
                 .work__content {
-                    display: flex;
-                  
 
                     .technology {
-                        flex: 1;
+                        padding: 0 7rem;
 
                         &__heading {
                             font-size: 1.3rem;
-                        font-weight: 600;
-                        margin-bottom: 1rem;
+                            font-weight: 600;
+                            margin-bottom: 1rem;
                         }
 
                         .work__tech {
+                            display: flex;
+                            flex-wrap: wrap;
 
                             .work__item {
-                                margin: .5rem 0;
+                                margin-right: 1.3rem;
                             }
                         }
                     }
 
                     .work__details {
                         flex: 1;
+
                         .current-work__title {
                             font-size: 1.3rem;
-                             font-weight: 600;
-                             display: block;
-                             margin-bottom: 1rem;
+                            font-weight: 600;
+                            display: block;
+                            margin-bottom: 1rem;
                         }
+
                         .media {
                             margin-bottom: 1rem;
-                            
+
+                            &__wrapper {
+                                position: relative;
+                                width: 27em;
+                                margin: auto;
+
+                                &:hover {
+
+                                    .media__image {
+                                        opacity: .3;
+                                    }
+
+                                    .buttons {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        pointer-events: initial;
+
+                                    }
+
+                                }
+
+
+
+                                .buttons {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    display: flex;
+                                    justify-content: space-around;
+                                    opacity: 0;
+                                    visibility: none;
+                                    pointer-events: none;
+                                    transition: opacity .5s ease;
+                                    width: 100%;
+                                    transform: translateX(-50%);
+
+                                }
+                            }
+
                             &__image {
                                 border: 2px solid white;
                                 border-radius: 5px;
+                                cursor: pointer;
                             }
                         }
-                        .buttons {
-                            display: flex;
-                            justify-content: space-around;
-                        }
+
                         button {
                             display: block;
+
                             a {
                                 text-decoration: none;
                                 color: white;
