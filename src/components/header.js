@@ -45,6 +45,7 @@ const Header = () => {
       </nav>
       <nav
         className={`nav--mobile-nav ${mobileNavOpened ? "nav-is-open" : ""}`}
+        aria-hidden="false"
       >
         <ul className="nav--mobile-nav__group nav__group">
           <li className="nav--mobile-nav__item nav__item" onClick={() => setMobileNav(!mobileNavOpened)}>

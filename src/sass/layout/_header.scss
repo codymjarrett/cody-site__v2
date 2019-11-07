@@ -5,7 +5,7 @@
 
 
 .nav--mobile-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -19,7 +19,7 @@
 
 .nav--mobile-nav.nav-is-open {
     opacity: 1;
-    z-index: 100;
+    z-index: 1000;
     left: 0;
     visibility: visible;
 }
@@ -108,10 +108,10 @@
 
 
 .mobile-nav-btn {
-    position: absolute;
+    position: fixed;
     top: 3rem;
     right: 0;
-    z-index: 1000;
+    z-index: 2000;
     background: none;
     border: 0;
     cursor: pointer;
