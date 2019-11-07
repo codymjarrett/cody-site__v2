@@ -32,8 +32,9 @@
     &--back-to-top-btn {
         background-color: $site-tertiary;
         font-size: 1.5rem;
+        
         &:hover {
-            background: $site-accent;
+            background: none;
         }
 
     }
