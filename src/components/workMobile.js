@@ -9,7 +9,7 @@ const WorkMobile = ({ response }) => {
   const [isScrolledDown, setIsScrolledDown] = useState(false)
   
 useEffect(()=> {
-  if (typeof window !== undefined) {
+  if (typeof window !== 'undefined') {
     window.onscroll = () => scrollFunction()
   }
 })
