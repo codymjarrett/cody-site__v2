@@ -37,10 +37,10 @@ const goBackToTop = () => {
             <span className="title">{node.node.title}</span>
             <div className="media">
             <Image
-          fluid={node.node.image.localFile.childImageSharp.fluid}
-          alt={`screenshot of ${node.node.image.title}`}
-          className="media__image"
-        />
+              fluid={node.node.image.localFile.childImageSharp.fluid}
+              alt={`screenshot of ${node.node.image.title}`}
+              className="media__image"
+              />
             </div>
             <div className="description">
             <span className="description__heading">What is this?</span>
