@@ -2,30 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 
 
-import Slider from "react-slick"
 
 const WorkMobile = ({ response }) => {
   
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-  }
   return (
-    <div className="work-mobile-slider">
-      <Slider {...settings} className="work-mobile-slider__slick">
-        {response ? response.map(node => (
-          <div className="work-mobile-slider__container">
+    <div className="work-mobile">
+        {response && response.map(node => (
+          <div className="work-mobile__item">
             <span className="title">{node.node.title}</span>
             <div className="media">
               <img
                 style={{ maxWidth: "100%", width: "24rem" }}
                 src={node.node.image.file.url}
-                alt=""
+                alt={`screenshot of ${node.node.title}`}
+                className="media__image"
               />
             </div>
             <div className="description">
@@ -66,8 +57,7 @@ const WorkMobile = ({ response }) => {
               </button>
             </div>
           </div>
-        )) : ""}
-      </Slider>
+        ))}
     </div>
   )
 }
