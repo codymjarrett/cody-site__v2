@@ -1,17 +1,39 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 
 
 const WorkMobile = ({ response }) => {
-  
 
+  const [isScrolledDown, setIsScrolledDown] = useState(false)
+  
+useEffect(()=> {
+  if (typeof window !== undefined) {
+    window.onscroll = function() {scrollFunction()};
+  }
+})
+
+const scrollFunction = () => {
+  const backToTopBtn = document.getElementById('back-to-top')
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    setIsScrolledDown(true)
+  } else {
+    setIsScrolledDown(false)
+  }
+}
+
+const backToTop = () => {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
 
   return (
     <div className="work-mobile">
-        {response && response.map(node => (
-          
+      <button className={`back-to-top btn btn--back-to-top-btn ${isScrolledDown && 'is-scrolled'}`} onClick={backToTop}>&uarr;</button>
+        {response && response.map(node => {
+          console.log(node)
+          return(
           <div className="work-mobile__item">
             <span className="title">{node.node.title}</span>
             <div className="media">
@@ -59,7 +81,7 @@ const WorkMobile = ({ response }) => {
               </button>
             </div>
           </div>
-        ))}
+        )})}
     </div>
   )
 }
