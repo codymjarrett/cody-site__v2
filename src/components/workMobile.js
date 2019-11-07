@@ -1,23 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Image from "gatsby-image"
 
 
 
 const WorkMobile = ({ response }) => {
   
 
+
   return (
     <div className="work-mobile">
         {response && response.map(node => (
+          
           <div className="work-mobile__item">
             <span className="title">{node.node.title}</span>
             <div className="media">
-              <img
-                style={{ maxWidth: "100%", width: "24rem" }}
-                src={node.node.image.file.url}
-                alt={`screenshot of ${node.node.title}`}
-                className="media__image"
-              />
+            <Image
+          fluid={node.node.image.localFile.childImageSharp.fluid}
+          alt={`screenshot of ${node.node.image.title}`}
+          className="media__image"
+        />
             </div>
             <div className="description">
             <span className="description__heading">What is this?</span>

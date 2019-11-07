@@ -9,7 +9,7 @@ import WorkDesktop from "../components/workDesktop"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const WorkPage = ({ data: { allContentfulProject } }) => {
-  
+  console.log(allContentfulProject)
   return (
     <Layout>
       <SEO title="Work" />
@@ -25,29 +25,38 @@ const WorkPage = ({ data: { allContentfulProject } }) => {
 export default WorkPage
 
 export const query = graphql`
-  {
-    allContentfulProject(sort: { fields: id, order: ASC }) {
-      edges {
-        node {
-          demo
-          github
-          tech
-          title
-          image {
-            file {
-              url
+{
+  allContentfulProject(sort: { fields: id, order: ASC }) {
+    edges {
+      node {
+        demo
+        github
+        tech
+        title
+         image {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 433) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
-          description {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          id
         }
+      }
+        description {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        id
       }
     }
   }
+}
+
 `
+
+
+
+

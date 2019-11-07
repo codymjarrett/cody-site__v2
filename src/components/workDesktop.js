@@ -1,12 +1,41 @@
 import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
+
+
+
+
 
 const WorkDesktop = ({ response }) => {
-  // at some point I want this to be dynamic and start with the first index
-  const [initialProject, setInitialProject] = useState(
-    "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
-  )
 
+// const {allContentfulProject: { edges }} = useStaticQuery(graphql`
+// query MyQuery {
+//   allContentfulProject {
+//     edges {
+//       node {
+//         image {
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 800, maxHeight: 433) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
+//             }
+//           }
+//           title
+//         }
+//         id
+//       }
+//     }
+//   }
+// }
+// `)
+
+// at some point I want this to be dynamic and start with the first index
+const [initialProject, setInitialProject] = useState(
+  "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
+  )
+  
+  
   const [activeElement, setActiveElement] = useState("")
 
   useEffect(() => {}, [response])
@@ -14,7 +43,7 @@ const WorkDesktop = ({ response }) => {
   useEffect(() => {
     if (response) {
       setActiveElement(response[0].node.id)
-      // setInitialProject(response[0].node.id)
+    
     }
   }, [])
 
@@ -54,12 +83,11 @@ const WorkDesktop = ({ response }) => {
 
   const image = () => {
     return response
-      .filter(p => p.node.id === initialProject)
+      .filter(e => e.node.id === initialProject)
       .map(i => (
-        <img
-          style={{ width: "27rem", "max-height": "233.812px" }}
-          src={i.node.image.file.url}
-          alt={`screenshot of ${i.node.title}`}
+        <Image
+          fluid={i.node.image.localFile.childImageSharp.fluid}
+          alt={`screenshot of ${i.node.image.title}`}
           className="media__image"
         />
       ))
