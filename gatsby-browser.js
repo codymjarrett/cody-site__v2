@@ -5,4 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-import './src/sass/main.scss'
+
+require("typeface-indie-flower")
+require("typeface-work-sans")

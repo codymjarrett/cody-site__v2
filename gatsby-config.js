@@ -6,14 +6,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: ['Work Sans:500,600,700', 'sans-serif', 'Indie Flower', 'cursive']
-        }
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-web-font-loader`,
+    //   options: {
+    //     google: {
+    //       families: ['Work Sans:500,600,700', 'sans-serif', 'Indie Flower', 'cursive']
+    //     }
+    //   }
+    // },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
