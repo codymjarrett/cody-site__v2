@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 

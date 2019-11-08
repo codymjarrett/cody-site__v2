@@ -2,18 +2,10 @@ import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from "@fortawesome/fontawesome-svg-core"
-import {
-  faGithub,
-  faTwitter,
-  faLinkedinIn,
-  fab,
-} from "@fortawesome/free-brands-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 
 library.add(fab)
 
-
-
-// import Image from "../components/image"
 
 const Footer = () => {
   return (
@@ -26,10 +18,8 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           Gatsby.js
-        </a>
-        {" "}
-        &
-        {" "}
+        </a>{" "}
+        &{" "}
         <a
           href="https://www.contentful.com/"
           target="_blank"

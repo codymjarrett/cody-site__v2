@@ -89,7 +89,7 @@ const ContactPage = () => {
       return (
         <div className="contact">
           <div className="contact-submission">
-            <span className="contact-submission__icon">👍</span>
+            <span className="contact-submission__icon" role="img" aria-label="thumbs up">👍</span>
             <p className="contact-submission__message">
               Thanks for the message!
             </p>
@@ -100,7 +100,7 @@ const ContactPage = () => {
       return (
         <div className="contact">
           <div className="contact-submission">
-            <span className="contact-submission__icon">👎</span>
+            <span className="contact-submission__icon" role="img" aria-label="thumbs down">👎</span>
             <p className="contact-submission__message">
               It looks like there was an error submitting, please try again.
             </p>

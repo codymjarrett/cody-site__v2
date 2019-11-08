@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 
 
@@ -7,28 +6,6 @@ import Image from "gatsby-image"
 
 
 const WorkDesktop = ({ response }) => {
-
-// const {allContentfulProject: { edges }} = useStaticQuery(graphql`
-// query MyQuery {
-//   allContentfulProject {
-//     edges {
-//       node {
-//         image {
-//           localFile {
-//             childImageSharp {
-//               fluid(maxWidth: 800, maxHeight: 433) {
-//                 ...GatsbyImageSharpFluid_withWebp
-//               }
-//             }
-//           }
-//           title
-//         }
-//         id
-//       }
-//     }
-//   }
-// }
-// `)
 
 // at some point I want this to be dynamic and start with the first index
 const [initialProject, setInitialProject] = useState(
@@ -45,7 +22,7 @@ const [initialProject, setInitialProject] = useState(
       setActiveElement(response[0].node.id)
     
     }
-  }, [])
+  }, [response])
 
   const getNewProject = id => {
     setInitialProject(id)
@@ -134,12 +111,12 @@ const [initialProject, setInitialProject] = useState(
             {response && image()}
             <div className="buttons">
               <button type="button" className="btn">
-                <a href={response && github()} target="_blank">
+                <a href={response && github()} target="_blank" rel="noopener noreferrer">
                   Github
                 </a>
               </button>
               <button type="button" className="btn">
-                <a href={response && demo()} target="_blank">
+                <a href={response && demo()} target="_blank" rel="noopener noreferrer">
                   Demo
                 </a>
               </button>
