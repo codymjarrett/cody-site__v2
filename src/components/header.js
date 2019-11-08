@@ -4,17 +4,17 @@ import React, { useState, useEffect } from "react"
 const Header = () => {
   const [mobileNavOpened, setMobileNav] = useState(false)
 
-  useEffect(() => {
-    setBodyVisibility()
-  })
+  // useEffect(() => {
+  //   setBodyVisibility()
+  // })
 
-  const setBodyVisibility = () => {
-    if (!mobileNavOpened) {
-      document.body.style.overflow = "visible"
-    } else if (mobileNavOpened) {
-      document.body.style.overflow = "hidden"
-    }
-  }
+  // const setBodyVisibility = () => {
+  //   if (!mobileNavOpened) {
+  //     document.body.style.overflow = "visible"
+  //   } else if (mobileNavOpened) {
+  //     document.body.style.overflow = "hidden"
+  //   }
+  // }
 
   return (
     <header className="header">
