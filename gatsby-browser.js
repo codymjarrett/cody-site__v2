@@ -8,3 +8,5 @@
 
 require("typeface-indie-flower")
 require("typeface-work-sans")
+
+import './src/styles/global.css'
