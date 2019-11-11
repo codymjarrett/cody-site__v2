@@ -5537,6 +5537,11 @@ gatsby-page-utils@^0.0.28:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-plugin-env-variables@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-1.0.1.tgz#89cdf43b03d46105521bb7d0f09d0d5b92ad83c8"
+  integrity sha512-TnXU+IjvM3iHcaNOa+alqP3Wk19+pmxvXwMyoPaUZIDKNwvpXRz8klsag2AwNlsqD17949/m8I80z8plZRyE1w==
+
 gatsby-plugin-manifest@^2.2.26:
   version "2.2.26"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.26.tgz#040a7dc2ab54e64cc97481adfb498e5dc8caade4"

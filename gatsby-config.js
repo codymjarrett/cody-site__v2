@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.GATSBY_API_SPACE_ID,
-        accessToken: process.env.GATSBY_API_ACCESS_TOKEN,
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
         downloadLocal: true
       },
     },
@@ -25,6 +25,12 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["SPACE_ID", "ACCESS_TOKEN"]
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
