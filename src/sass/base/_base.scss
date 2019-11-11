@@ -3,7 +3,6 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    // background-color: #282B48;
     height: 100%;
 }
 
@@ -11,27 +10,10 @@ html {
 
 
 body {
-    // font-family: 'Work Sans', sans-serif;
     margin: 0;
     min-height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li,
-p,
-a {
-    // font-family: 'Work Sans', sans-serif;
-}
-
-// strong, b {
-//     font-weight: 700;
-// }
 
 @media(min-width:$screen-sm-min) {
     body {
