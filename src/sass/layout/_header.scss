@@ -181,12 +181,13 @@
 
 .header {
     padding: 1rem;
+    margin-bottom: 3rem;
 
     &__logo {
         display: inline;
         text-decoration: none;
         padding: 2rem;
-        // font-family: 'Indie Flower', cursive;
+        font-family: 'Indie Flower', cursive;
 
         // &:hover {
         //     color: $site-accent;
@@ -214,7 +215,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         &__logo {
             margin-right: auto;
