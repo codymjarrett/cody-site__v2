@@ -27,7 +27,10 @@ li,
 p,
 a {
     font-family: 'Work Sans', sans-serif;
+}
 
+strong {
+    font-weight: 700;
 }
 
 @media(min-width:$screen-sm-min) {
