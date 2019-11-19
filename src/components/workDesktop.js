@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react"
 import Image from "gatsby-image"
 
-
-
-
-
 const WorkDesktop = ({ response }) => {
-
-// at some point I want this to be dynamic and start with the first index
-const [initialProject, setInitialProject] = useState(
-  "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
+  // at some point I want this to be dynamic and start with the first index
+  const [initialProject, setInitialProject] = useState(
+    "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
   )
-  
-  
+
   const [activeElement, setActiveElement] = useState("")
 
   useEffect(() => {}, [response])
@@ -20,7 +14,6 @@ const [initialProject, setInitialProject] = useState(
   useEffect(() => {
     if (response) {
       setActiveElement(response[0].node.id)
-    
     }
   }, [response])
 
@@ -48,11 +41,22 @@ const [initialProject, setInitialProject] = useState(
       ))
   }
 
+  const description = () => {
+    console.log(response)
+    return response
+      .filter(p => p.node.id === initialProject)
+      .map(i => (
+        <p className="description__content">
+          {i.node.description.content[0].content[0].value}
+        </p>
+      ))
+  }
+
   const tech = () => {
     let n = response.filter(p => p.node.id === initialProject)
     n = n[0].node.tech.map(i => (
       <li className="work__item" key={i.id}>
-        {i} 
+        {i}
       </li>
     ))
     return n
@@ -107,28 +111,38 @@ const [initialProject, setInitialProject] = useState(
           <div className="work__details">
             {response && title()}
             <div class="media">
-            <div class="media__wrapper">
-            {response && image()}
-            <div className="buttons">
-              <button type="button" className="btn">
-                <a href={response && github()} target="_blank" rel="noopener noreferrer">
-                  Github
-                </a>
-              </button>
-              <button type="button" className="btn">
-                <a href={response && demo()} target="_blank" rel="noopener noreferrer">
-                  Demo
-                </a>
-              </button>
+              <div class="media__wrapper">
+                {response && image()}
+                <div className="buttons">
+                  <button type="button" className="btn">
+                    <a
+                      href={response && github()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github
+                    </a>
+                  </button>
+                  <button type="button" className="btn">
+                    <a
+                      href={response && demo()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Demo
+                    </a>
+                  </button>
+                </div>
+              </div>
             </div>
-
-            </div>
+            <div className="description">
+              <p className="description__heading">What is this ?</p>
+              <p className="description__content">{response && description()}</p>
             </div>
             <div className="technology">
-              <p className="technology__heading">Technologies</p>
+              <p className="technology__heading">Tech Stack:</p>
               <ul className="group work__tech">{response && tech()}</ul>
             </div>
-            
           </div>
         </div>
       </div>

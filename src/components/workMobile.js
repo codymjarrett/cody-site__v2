@@ -46,8 +46,8 @@ const goBackToTop = () => {
             <p className="description__content">
               {node.node.description.content[0].content[0].value}
             </p>
-
             </div>
+            
             <div className="tech-stack">
             <span className="tech-stack__heading">Tech Stack:</span>
             <ul className="tech-stack__group">
