@@ -49,6 +49,7 @@
                     border: 2px solid white;
                     border-radius: 5px;
                 }
+                margin-bottom: 2rem;
             }
 
             .description {
@@ -58,6 +59,12 @@
                     text-align: center;
                     display: block;
                     font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+                &__content {
+                    text-align: center;
+                    margin-bottom: 2rem;
+
                 }
             }
 
@@ -68,11 +75,15 @@
                     text-align: center;
                     display: block;
                     font-weight: 600;
+                    margin-bottom: 1rem;
                 }
 
                 &__group {
                     display: flex;
                     flex-wrap: wrap;
+                    justify-content: center;
+                    margin-bottom: 2rem;
+
                 }
 
                 &__item {
