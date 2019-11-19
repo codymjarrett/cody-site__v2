@@ -1,20 +1,9 @@
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 const Header = () => {
   const [mobileNavOpened, setMobileNav] = useState(false)
 
-  // useEffect(() => {
-  //   setBodyVisibility()
-  // })
-
-  // const setBodyVisibility = () => {
-  //   if (!mobileNavOpened) {
-  //     document.body.style.overflow = "visible"
-  //   } else if (mobileNavOpened) {
-  //     document.body.style.overflow = "hidden"
-  //   }
-  // }
 
   return (
     <header className="header">

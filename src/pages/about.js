@@ -27,7 +27,7 @@ const AboutPage = ({ data: { allContentfulAbout } }) => (
     <SEO title="About me" />
     <div className="about">
       <h1 className="about__title">About Me</h1>
-      {allContentfulAbout.edges[0].node.body.json.content.map(stuff =>
+      {allContentfulAbout.edges[0].node.body.json.content.map((stuff, idx) =>
         documentToReactComponents(stuff, options)
       )}
     </div>
