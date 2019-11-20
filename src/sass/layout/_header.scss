@@ -15,7 +15,6 @@
     z-index: -1;
     visibility: hidden;
     transition: all .375s;
-    // font-family: 'Work Sans', sans-serif;
 }
 
 .nav--mobile-nav.nav-is-open {
@@ -210,7 +209,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
 
         &__logo {
             margin-right: auto;
