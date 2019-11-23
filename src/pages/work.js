@@ -8,7 +8,6 @@ import WorkDesktop from "../components/workDesktop"
 
 
 const WorkPage = ({ data: { allContentfulProject } }) => {
-  console.log(allContentfulProject)
   return (
     <Layout>
       <SEO title="Work" />

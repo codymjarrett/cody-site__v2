@@ -30,7 +30,6 @@ const goBackToTop = () => {
     <div className="work-mobile">
       <button className={`back-to-top btn btn--back-to-top-btn ${isScrolledDown && 'is-scrolled'}`} onClick={goBackToTop}>&uarr;</button>
         {response && response.map(node => {
-          console.log(node)
           return(
           <div className="work-mobile__item">
             <span className="title">{node.node.title}</span>

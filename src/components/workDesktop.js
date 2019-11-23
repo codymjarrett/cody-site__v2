@@ -42,7 +42,6 @@ const WorkDesktop = ({ response }) => {
   }
 
   const description = () => {
-    console.log(response)
     return response
       .filter(p => p.node.id === initialProject)
       .map(i => (
