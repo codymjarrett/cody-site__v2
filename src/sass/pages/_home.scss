@@ -17,7 +17,10 @@
         .job-title {
             display: block;
             font-size: 1.3rem;
+            
+            &:first-of-type {
             margin-top: 1rem;
+            }
 
         }
     }
