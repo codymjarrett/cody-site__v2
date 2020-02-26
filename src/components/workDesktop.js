@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 const WorkDesktop = ({ response }) => {
   // at some point I want this to be dynamic and start with the first index
   const [initialProject, setInitialProject] = useState(
-    "046e4319-f3ea-59b2-b0e9-8a5baeae5b40"
+    "2af9e0da-8c56-57f0-a9ab-13e2b590555d"
   )
 
   const [activeElement, setActiveElement] = useState("")
