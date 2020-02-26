@@ -88,8 +88,13 @@ const WorkDesktop = ({ response }) => {
   }
 
   const github = () => {
-    let n = response.filter(p => p.node.id === initialProject)
-    return n[0].node.github
+   let n;
+   if(response){
+    n = response.filter(p => p.node.id === initialProject)
+}
+
+return n[0].node.github
+
   }
 
   const demo = () => {
