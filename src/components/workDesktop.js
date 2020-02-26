@@ -3,9 +3,7 @@ import Image from "gatsby-image"
 
 const WorkDesktop = ({ response }) => {
   // at some point I want this to be dynamic and start with the first index
-  const [initialProject, setInitialProject] = useState(
-    "2af9e0da-8c56-57f0-a9ab-13e2b590555d"
-  )
+  const [initialProject, setInitialProject] = useState("")
 
   const [activeElement, setActiveElement] = useState("")
 
@@ -13,6 +11,7 @@ const WorkDesktop = ({ response }) => {
 
   useEffect(() => {
     if (response) {
+      setInitialProject(response[0].node.id)
       setActiveElement(response[0].node.id)
     }
   }, [response])
