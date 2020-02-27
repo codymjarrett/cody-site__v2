@@ -1,7 +1,5 @@
 import React from "react"
 
-// import Image from "../components/image"
-
 const Home = () => {
   return (
     <div className="home">
@@ -13,10 +11,7 @@ const Home = () => {
         </h1>
       </div>
       <div className="home__main">
-        <p class="home__content">
-          I'm a Chicago based Front End Engineer. 
-          
-        </p>
+        <p class="home__content">Chicago based Front End Engineer.</p>
       </div>
     </div>
   )

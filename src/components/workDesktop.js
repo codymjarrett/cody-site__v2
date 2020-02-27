@@ -2,16 +2,11 @@ import React, { useState, useEffect } from "react"
 import Image from "gatsby-image"
 
 const WorkDesktop = ({ response }) => {
-  // at some point I want this to be dynamic and start with the first index
-  const [initialProject, setInitialProject] = useState("")
-
+  const [initialProject, setInitialProject] = useState(response[0].node.id)
   const [activeElement, setActiveElement] = useState("")
 
-  useEffect(() => {}, [response])
-
   useEffect(() => {
-    if (response) {
-      setInitialProject(response[0].node.id)
+    if (response.length > 0) {
       setActiveElement(response[0].node.id)
     }
   }, [response])
@@ -43,9 +38,20 @@ const WorkDesktop = ({ response }) => {
   const description = () => {
     return response
       .filter(p => p.node.id === initialProject)
-      .map(i => (
-        <p className="description__content">
+      .map((i, idx) => (
+        <p className="description__content" key={idx}>
           {i.node.description.content[0].content[0].value}
+          {i.node.description.content[0].content[1] &&
+            i.node.description.content[0].content[1].value}
+          {i.node.description.content[0].content[2] && (
+            <a
+              href={i.node.description.content[0].content[2].value.slice(3)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+          )}
         </p>
       ))
   }
@@ -63,8 +69,9 @@ const WorkDesktop = ({ response }) => {
   const image = () => {
     return response
       .filter(e => e.node.id === initialProject)
-      .map(i => (
+      .map((i, idx) => (
         <Image
+          key={idx}
           fluid={i.node.image.localFile.childImageSharp.fluid}
           alt={`screenshot of ${i.node.image.title}`}
           className="media__image"
@@ -88,13 +95,12 @@ const WorkDesktop = ({ response }) => {
   }
 
   const github = () => {
-   let n;
-   if(response){
-    n = response.filter(p => p.node.id === initialProject)
-}
+    let n
+    if (response) {
+      n = response.filter(p => p.node.id === initialProject)
+    }
 
-return n[0].node.github
-
+    return n[0].node.github
   }
 
   const demo = () => {
@@ -113,8 +119,8 @@ return n[0].node.github
         <div className="work__content">
           <div className="work__details">
             {response && title()}
-            <div class="media">
-              <div class="media__wrapper">
+            <div className="media">
+              <div className="media__wrapper">
                 {response && image()}
                 <div className="buttons">
                   <button type="button" className="btn">
@@ -140,7 +146,9 @@ return n[0].node.github
             </div>
             <div className="description">
               <p className="description__heading">What is this ?</p>
-              <p className="description__content">{response && description()}</p>
+              <div className="description__content">
+                {response && description()}
+              </div>
             </div>
             <div className="technology">
               <p className="technology__heading">Tech Stack:</p>
